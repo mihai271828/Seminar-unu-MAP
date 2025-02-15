@@ -6,4 +6,14 @@ public class StringsOps {
         }
         return reversed;
     }
+
+    public int wordCount(String input) {
+        int count = 0;
+        for (int i = 0; i < input.length(); i++) {
+            if (input.charAt(i) == ' ') {
+                count++;
+            }
+        }
+        return count+1;
+    }
 }
