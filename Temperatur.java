@@ -46,5 +46,35 @@ public class Temperatur {
         }
         return new int[]{index+1,index+2};
     }
+    public void print() {
+        String day="Tag: ";
+        String temperature="Temperatur: ";
+        int differenz=temperature.length()-day.length();
+        for(int i=0; i<differenz; i++){
+            day +=" ";
+        }
+        for (int i=0; i<temperatur.length; i++){
+                String tag=String.valueOf(i+1);
+                String temp=String.valueOf(temperatur[i]);
+            if(tag.length()<temp.length()){
+                for(int j=0; j<temp.length()-tag.length(); j++){
+                    tag+=' ';
+                }
+            }
+            else if (temp.length()<tag.length()){
+                for(int j=0; j<temp.length()-tag.length(); j++){
+                    temp+=' ';
+                }
+            }
+            temperature +=" ";
+            day +=" ";
+
+            temperature += temp;
+            day += tag;
+        }
+        System.out.println(day);
+        System.out.println(temperature);
+
+    }
 
 }
