@@ -58,12 +58,11 @@ public class Temperatur {
                 String temp=String.valueOf(temperatur[i]);
             if(tag.length()<temp.length()){
                 for(int j=0; j<temp.length()-tag.length(); j++){
-                    tag+=' ';
+                    tag+=" ";
                 }
-            }
-            else if (temp.length()<tag.length()){
-                for(int j=0; j<temp.length()-tag.length(); j++){
-                    temp+=' ';
+            } else if (temp.length()<tag.length()){
+                for(int j=0; j<tag.length()-temp.length(); j++){
+                    temp+=" ";
                 }
             }
             temperature +=" ";
